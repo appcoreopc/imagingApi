@@ -23,6 +23,32 @@ set(CONAN_SHARED_LINKER_FLAGS_BOOST_LIST "")
 set(CONAN_EXE_LINKER_FLAGS_BOOST_LIST "")
 
 
+set(CONAN_POCO_ROOT "/home/jeremy/.conan/data/Poco/1.9.0/pocoproject/stable/package/267e79036c624016543079a2cd6f20b723771f54")
+set(CONAN_INCLUDE_DIRS_POCO "/home/jeremy/.conan/data/Poco/1.9.0/pocoproject/stable/package/267e79036c624016543079a2cd6f20b723771f54/include")
+set(CONAN_LIB_DIRS_POCO "/home/jeremy/.conan/data/Poco/1.9.0/pocoproject/stable/package/267e79036c624016543079a2cd6f20b723771f54/lib")
+set(CONAN_BIN_DIRS_POCO )
+set(CONAN_RES_DIRS_POCO )
+set(CONAN_SRC_DIRS_POCO )
+set(CONAN_BUILD_DIRS_POCO "/home/jeremy/.conan/data/Poco/1.9.0/pocoproject/stable/package/267e79036c624016543079a2cd6f20b723771f54/")
+set(CONAN_LIBS_POCO PocoMongoDB PocoNet PocoNetSSL PocoCrypto PocoData PocoDataSQLite PocoZip PocoUtil PocoXML PocoJSON PocoFoundation pthread dl rt)
+set(CONAN_DEFINES_POCO "-DPOCO_STATIC=ON"
+			"-DPOCO_NO_AUTOMATIC_LIBS")
+# COMPILE_DEFINITIONS are equal to CONAN_DEFINES without -D, for targets
+set(CONAN_COMPILE_DEFINITIONS_POCO "POCO_STATIC=ON"
+			"POCO_NO_AUTOMATIC_LIBS")
+
+set(CONAN_C_FLAGS_POCO "")
+set(CONAN_CXX_FLAGS_POCO "")
+set(CONAN_SHARED_LINKER_FLAGS_POCO "")
+set(CONAN_EXE_LINKER_FLAGS_POCO "")
+
+# For modern cmake targets we use the list variables (separated with ;)
+set(CONAN_C_FLAGS_POCO_LIST "")
+set(CONAN_CXX_FLAGS_POCO_LIST "")
+set(CONAN_SHARED_LINKER_FLAGS_POCO_LIST "")
+set(CONAN_EXE_LINKER_FLAGS_POCO_LIST "")
+
+
 set(CONAN_BZIP2_ROOT "/home/jeremy/.conan/data/bzip2/1.0.6/conan/stable/package/d50a0d523d98c15bb147b18fa7d203887c38be8b")
 set(CONAN_INCLUDE_DIRS_BZIP2 "/home/jeremy/.conan/data/bzip2/1.0.6/conan/stable/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include")
 set(CONAN_LIB_DIRS_BZIP2 "/home/jeremy/.conan/data/bzip2/1.0.6/conan/stable/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib")
@@ -45,6 +71,30 @@ set(CONAN_C_FLAGS_BZIP2_LIST "")
 set(CONAN_CXX_FLAGS_BZIP2_LIST "")
 set(CONAN_SHARED_LINKER_FLAGS_BZIP2_LIST "")
 set(CONAN_EXE_LINKER_FLAGS_BZIP2_LIST "")
+
+
+set(CONAN_OPENSSL_ROOT "/home/jeremy/.conan/data/OpenSSL/1.0.2o/conan/stable/package/75b541b6f810787a4fcee8cec9cfdbf95959366f")
+set(CONAN_INCLUDE_DIRS_OPENSSL "/home/jeremy/.conan/data/OpenSSL/1.0.2o/conan/stable/package/75b541b6f810787a4fcee8cec9cfdbf95959366f/include")
+set(CONAN_LIB_DIRS_OPENSSL "/home/jeremy/.conan/data/OpenSSL/1.0.2o/conan/stable/package/75b541b6f810787a4fcee8cec9cfdbf95959366f/lib")
+set(CONAN_BIN_DIRS_OPENSSL )
+set(CONAN_RES_DIRS_OPENSSL )
+set(CONAN_SRC_DIRS_OPENSSL )
+set(CONAN_BUILD_DIRS_OPENSSL "/home/jeremy/.conan/data/OpenSSL/1.0.2o/conan/stable/package/75b541b6f810787a4fcee8cec9cfdbf95959366f/")
+set(CONAN_LIBS_OPENSSL ssl crypto dl)
+set(CONAN_DEFINES_OPENSSL )
+# COMPILE_DEFINITIONS are equal to CONAN_DEFINES without -D, for targets
+set(CONAN_COMPILE_DEFINITIONS_OPENSSL )
+
+set(CONAN_C_FLAGS_OPENSSL "")
+set(CONAN_CXX_FLAGS_OPENSSL "")
+set(CONAN_SHARED_LINKER_FLAGS_OPENSSL "")
+set(CONAN_EXE_LINKER_FLAGS_OPENSSL "")
+
+# For modern cmake targets we use the list variables (separated with ;)
+set(CONAN_C_FLAGS_OPENSSL_LIST "")
+set(CONAN_CXX_FLAGS_OPENSSL_LIST "")
+set(CONAN_SHARED_LINKER_FLAGS_OPENSSL_LIST "")
+set(CONAN_EXE_LINKER_FLAGS_OPENSSL_LIST "")
 
 
 set(CONAN_ZLIB_ROOT "/home/jeremy/.conan/data/zlib/1.2.11/conan/stable/package/d50a0d523d98c15bb147b18fa7d203887c38be8b")
@@ -86,7 +136,7 @@ set(CONAN_SETTINGS_COMPILER_VERSION "7")
 set(CONAN_SETTINGS_OS "Linux")
 set(CONAN_SETTINGS_OS_BUILD "Linux")
 
-set(CONAN_DEPENDENCIES boost bzip2 zlib)
+set(CONAN_DEPENDENCIES boost Poco bzip2 OpenSSL zlib)
 # Storing original command line args (CMake helper) flags
 set(CONAN_CMD_CXX_FLAGS ${CONAN_CXX_FLAGS})
 
@@ -95,17 +145,25 @@ set(CONAN_CMD_C_FLAGS ${CONAN_C_FLAGS})
 # Defining accumulated conan variables for all deps
 
 set(CONAN_INCLUDE_DIRS "/home/jeremy/.conan/data/boost/1.69.0/conan/stable/package/8088564a38dc181a1d14e21a8ad7180b4bfcfc53/include"
+			"/home/jeremy/.conan/data/Poco/1.9.0/pocoproject/stable/package/267e79036c624016543079a2cd6f20b723771f54/include"
 			"/home/jeremy/.conan/data/bzip2/1.0.6/conan/stable/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include"
+			"/home/jeremy/.conan/data/OpenSSL/1.0.2o/conan/stable/package/75b541b6f810787a4fcee8cec9cfdbf95959366f/include"
 			"/home/jeremy/.conan/data/zlib/1.2.11/conan/stable/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include" ${CONAN_INCLUDE_DIRS})
 set(CONAN_LIB_DIRS "/home/jeremy/.conan/data/boost/1.69.0/conan/stable/package/8088564a38dc181a1d14e21a8ad7180b4bfcfc53/lib"
+			"/home/jeremy/.conan/data/Poco/1.9.0/pocoproject/stable/package/267e79036c624016543079a2cd6f20b723771f54/lib"
 			"/home/jeremy/.conan/data/bzip2/1.0.6/conan/stable/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+			"/home/jeremy/.conan/data/OpenSSL/1.0.2o/conan/stable/package/75b541b6f810787a4fcee8cec9cfdbf95959366f/lib"
 			"/home/jeremy/.conan/data/zlib/1.2.11/conan/stable/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib" ${CONAN_LIB_DIRS})
 set(CONAN_BIN_DIRS "/home/jeremy/.conan/data/bzip2/1.0.6/conan/stable/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/bin" ${CONAN_BIN_DIRS})
 set(CONAN_RES_DIRS  ${CONAN_RES_DIRS})
-set(CONAN_LIBS boost_wave boost_container boost_contract boost_exception boost_graph boost_iostreams boost_locale boost_log boost_program_options boost_random boost_regex boost_serialization boost_wserialization boost_coroutine boost_fiber boost_context boost_timer boost_thread boost_chrono boost_date_time boost_atomic boost_filesystem boost_system boost_type_erasure boost_stacktrace_addr2line boost_math_tr1 boost_math_tr1f boost_unit_test_framework boost_math_tr1l boost_stacktrace_noop boost_stacktrace_basic boost_log_setup boost_stacktrace_backtrace boost_math_c99f boost_math_c99 boost_math_c99l pthread bz2 z ${CONAN_LIBS})
-set(CONAN_DEFINES "-DBOOST_USE_STATIC_LIBS" ${CONAN_DEFINES})
+set(CONAN_LIBS boost_wave boost_container boost_contract boost_exception boost_graph boost_iostreams boost_locale boost_log boost_program_options boost_random boost_regex boost_serialization boost_wserialization boost_coroutine boost_fiber boost_context boost_timer boost_thread boost_chrono boost_date_time boost_atomic boost_filesystem boost_system boost_type_erasure boost_stacktrace_addr2line boost_math_tr1 boost_math_tr1f boost_unit_test_framework boost_math_tr1l boost_stacktrace_noop boost_stacktrace_basic boost_log_setup boost_stacktrace_backtrace boost_math_c99f boost_math_c99 boost_math_c99l PocoMongoDB PocoNet PocoNetSSL PocoCrypto PocoData PocoDataSQLite PocoZip PocoUtil PocoXML PocoJSON PocoFoundation pthread rt bz2 ssl crypto dl z ${CONAN_LIBS})
+set(CONAN_DEFINES "-DPOCO_STATIC=ON"
+			"-DPOCO_NO_AUTOMATIC_LIBS"
+			"-DBOOST_USE_STATIC_LIBS" ${CONAN_DEFINES})
 set(CONAN_CMAKE_MODULE_PATH "/home/jeremy/.conan/data/boost/1.69.0/conan/stable/package/8088564a38dc181a1d14e21a8ad7180b4bfcfc53/"
+			"/home/jeremy/.conan/data/Poco/1.9.0/pocoproject/stable/package/267e79036c624016543079a2cd6f20b723771f54/"
 			"/home/jeremy/.conan/data/bzip2/1.0.6/conan/stable/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/"
+			"/home/jeremy/.conan/data/OpenSSL/1.0.2o/conan/stable/package/75b541b6f810787a4fcee8cec9cfdbf95959366f/"
 			"/home/jeremy/.conan/data/zlib/1.2.11/conan/stable/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/" ${CONAN_CMAKE_MODULE_PATH})
 
 set(CONAN_CXX_FLAGS " ${CONAN_CXX_FLAGS}")
@@ -158,6 +216,39 @@ macro(conan_define_targets)
                                                                   $<$<CONFIG:Debug>:${CONAN_C_FLAGS_BOOST_DEBUG_LIST}  ${CONAN_CXX_FLAGS_BOOST_DEBUG_LIST}>)
  
 
+    conan_package_library_targets("${CONAN_LIBS_POCO}" "${CONAN_LIB_DIRS_POCO}"
+                                  CONAN_PACKAGE_TARGETS_POCO "CONAN_PKG::OpenSSL" "" Poco)
+    conan_package_library_targets("${CONAN_LIBS_POCO_DEBUG}" "${CONAN_LIB_DIRS_POCO_DEBUG}"
+                                  CONAN_PACKAGE_TARGETS_POCO_DEBUG "CONAN_PKG::OpenSSL" "debug" Poco)
+    conan_package_library_targets("${CONAN_LIBS_POCO_RELEASE}" "${CONAN_LIB_DIRS_POCO_RELEASE}"
+                                  CONAN_PACKAGE_TARGETS_POCO_RELEASE "CONAN_PKG::OpenSSL" "release" Poco)
+
+    add_library(CONAN_PKG::Poco INTERFACE IMPORTED)
+
+    # Property INTERFACE_LINK_FLAGS do not work, necessary to add to INTERFACE_LINK_LIBRARIES
+    set_property(TARGET CONAN_PKG::Poco PROPERTY INTERFACE_LINK_LIBRARIES ${CONAN_PACKAGE_TARGETS_POCO} ${CONAN_SHARED_LINKER_FLAGS_POCO_LIST} ${CONAN_EXE_LINKER_FLAGS_POCO_LIST}
+                                                                 $<$<CONFIG:Release>:${CONAN_PACKAGE_TARGETS_POCO_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_POCO_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_POCO_RELEASE_LIST}>
+                                                                 $<$<CONFIG:RelWithDebInfo>:${CONAN_PACKAGE_TARGETS_POCO_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_POCO_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_POCO_RELEASE_LIST}>
+                                                                 $<$<CONFIG:MinSizeRel>:${CONAN_PACKAGE_TARGETS_POCO_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_POCO_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_POCO_RELEASE_LIST}>
+                                                                 $<$<CONFIG:Debug>:${CONAN_PACKAGE_TARGETS_POCO_DEBUG} ${CONAN_SHARED_LINKER_FLAGS_POCO_DEBUG_LIST} ${CONAN_EXE_LINKER_FLAGS_POCO_DEBUG_LIST}>
+                                                                 CONAN_PKG::OpenSSL)
+    set_property(TARGET CONAN_PKG::Poco PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${CONAN_INCLUDE_DIRS_POCO}
+                                                                      $<$<CONFIG:Release>:${CONAN_INCLUDE_DIRS_POCO_RELEASE}>
+                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_INCLUDE_DIRS_POCO_RELEASE}>
+                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_INCLUDE_DIRS_POCO_RELEASE}>
+                                                                      $<$<CONFIG:Debug>:${CONAN_INCLUDE_DIRS_POCO_DEBUG}>)
+    set_property(TARGET CONAN_PKG::Poco PROPERTY INTERFACE_COMPILE_DEFINITIONS ${CONAN_COMPILE_DEFINITIONS_POCO}
+                                                                      $<$<CONFIG:Release>:${CONAN_COMPILE_DEFINITIONS_POCO_RELEASE}>
+                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_COMPILE_DEFINITIONS_POCO_RELEASE}>
+                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_COMPILE_DEFINITIONS_POCO_RELEASE}>
+                                                                      $<$<CONFIG:Debug>:${CONAN_COMPILE_DEFINITIONS_POCO_DEBUG}>)
+    set_property(TARGET CONAN_PKG::Poco PROPERTY INTERFACE_COMPILE_OPTIONS ${CONAN_C_FLAGS_POCO_LIST} ${CONAN_CXX_FLAGS_POCO_LIST}
+                                                                  $<$<CONFIG:Release>:${CONAN_C_FLAGS_POCO_RELEASE_LIST} ${CONAN_CXX_FLAGS_POCO_RELEASE_LIST}>
+                                                                  $<$<CONFIG:RelWithDebInfo>:${CONAN_C_FLAGS_POCO_RELEASE_LIST} ${CONAN_CXX_FLAGS_POCO_RELEASE_LIST}>
+                                                                  $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_POCO_RELEASE_LIST} ${CONAN_CXX_FLAGS_POCO_RELEASE_LIST}>
+                                                                  $<$<CONFIG:Debug>:${CONAN_C_FLAGS_POCO_DEBUG_LIST}  ${CONAN_CXX_FLAGS_POCO_DEBUG_LIST}>)
+ 
+
     conan_package_library_targets("${CONAN_LIBS_BZIP2}" "${CONAN_LIB_DIRS_BZIP2}"
                                   CONAN_PACKAGE_TARGETS_BZIP2 "" "" bzip2)
     conan_package_library_targets("${CONAN_LIBS_BZIP2_DEBUG}" "${CONAN_LIB_DIRS_BZIP2_DEBUG}"
@@ -189,6 +280,39 @@ macro(conan_define_targets)
                                                                   $<$<CONFIG:RelWithDebInfo>:${CONAN_C_FLAGS_BZIP2_RELEASE_LIST} ${CONAN_CXX_FLAGS_BZIP2_RELEASE_LIST}>
                                                                   $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_BZIP2_RELEASE_LIST} ${CONAN_CXX_FLAGS_BZIP2_RELEASE_LIST}>
                                                                   $<$<CONFIG:Debug>:${CONAN_C_FLAGS_BZIP2_DEBUG_LIST}  ${CONAN_CXX_FLAGS_BZIP2_DEBUG_LIST}>)
+ 
+
+    conan_package_library_targets("${CONAN_LIBS_OPENSSL}" "${CONAN_LIB_DIRS_OPENSSL}"
+                                  CONAN_PACKAGE_TARGETS_OPENSSL "CONAN_PKG::zlib" "" OpenSSL)
+    conan_package_library_targets("${CONAN_LIBS_OPENSSL_DEBUG}" "${CONAN_LIB_DIRS_OPENSSL_DEBUG}"
+                                  CONAN_PACKAGE_TARGETS_OPENSSL_DEBUG "CONAN_PKG::zlib" "debug" OpenSSL)
+    conan_package_library_targets("${CONAN_LIBS_OPENSSL_RELEASE}" "${CONAN_LIB_DIRS_OPENSSL_RELEASE}"
+                                  CONAN_PACKAGE_TARGETS_OPENSSL_RELEASE "CONAN_PKG::zlib" "release" OpenSSL)
+
+    add_library(CONAN_PKG::OpenSSL INTERFACE IMPORTED)
+
+    # Property INTERFACE_LINK_FLAGS do not work, necessary to add to INTERFACE_LINK_LIBRARIES
+    set_property(TARGET CONAN_PKG::OpenSSL PROPERTY INTERFACE_LINK_LIBRARIES ${CONAN_PACKAGE_TARGETS_OPENSSL} ${CONAN_SHARED_LINKER_FLAGS_OPENSSL_LIST} ${CONAN_EXE_LINKER_FLAGS_OPENSSL_LIST}
+                                                                 $<$<CONFIG:Release>:${CONAN_PACKAGE_TARGETS_OPENSSL_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_OPENSSL_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_OPENSSL_RELEASE_LIST}>
+                                                                 $<$<CONFIG:RelWithDebInfo>:${CONAN_PACKAGE_TARGETS_OPENSSL_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_OPENSSL_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_OPENSSL_RELEASE_LIST}>
+                                                                 $<$<CONFIG:MinSizeRel>:${CONAN_PACKAGE_TARGETS_OPENSSL_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_OPENSSL_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_OPENSSL_RELEASE_LIST}>
+                                                                 $<$<CONFIG:Debug>:${CONAN_PACKAGE_TARGETS_OPENSSL_DEBUG} ${CONAN_SHARED_LINKER_FLAGS_OPENSSL_DEBUG_LIST} ${CONAN_EXE_LINKER_FLAGS_OPENSSL_DEBUG_LIST}>
+                                                                 CONAN_PKG::zlib)
+    set_property(TARGET CONAN_PKG::OpenSSL PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${CONAN_INCLUDE_DIRS_OPENSSL}
+                                                                      $<$<CONFIG:Release>:${CONAN_INCLUDE_DIRS_OPENSSL_RELEASE}>
+                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_INCLUDE_DIRS_OPENSSL_RELEASE}>
+                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_INCLUDE_DIRS_OPENSSL_RELEASE}>
+                                                                      $<$<CONFIG:Debug>:${CONAN_INCLUDE_DIRS_OPENSSL_DEBUG}>)
+    set_property(TARGET CONAN_PKG::OpenSSL PROPERTY INTERFACE_COMPILE_DEFINITIONS ${CONAN_COMPILE_DEFINITIONS_OPENSSL}
+                                                                      $<$<CONFIG:Release>:${CONAN_COMPILE_DEFINITIONS_OPENSSL_RELEASE}>
+                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_COMPILE_DEFINITIONS_OPENSSL_RELEASE}>
+                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_COMPILE_DEFINITIONS_OPENSSL_RELEASE}>
+                                                                      $<$<CONFIG:Debug>:${CONAN_COMPILE_DEFINITIONS_OPENSSL_DEBUG}>)
+    set_property(TARGET CONAN_PKG::OpenSSL PROPERTY INTERFACE_COMPILE_OPTIONS ${CONAN_C_FLAGS_OPENSSL_LIST} ${CONAN_CXX_FLAGS_OPENSSL_LIST}
+                                                                  $<$<CONFIG:Release>:${CONAN_C_FLAGS_OPENSSL_RELEASE_LIST} ${CONAN_CXX_FLAGS_OPENSSL_RELEASE_LIST}>
+                                                                  $<$<CONFIG:RelWithDebInfo>:${CONAN_C_FLAGS_OPENSSL_RELEASE_LIST} ${CONAN_CXX_FLAGS_OPENSSL_RELEASE_LIST}>
+                                                                  $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_OPENSSL_RELEASE_LIST} ${CONAN_CXX_FLAGS_OPENSSL_RELEASE_LIST}>
+                                                                  $<$<CONFIG:Debug>:${CONAN_C_FLAGS_OPENSSL_DEBUG_LIST}  ${CONAN_CXX_FLAGS_OPENSSL_DEBUG_LIST}>)
  
 
     conan_package_library_targets("${CONAN_LIBS_ZLIB}" "${CONAN_LIB_DIRS_ZLIB}"
@@ -223,7 +347,7 @@ macro(conan_define_targets)
                                                                   $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_ZLIB_RELEASE_LIST} ${CONAN_CXX_FLAGS_ZLIB_RELEASE_LIST}>
                                                                   $<$<CONFIG:Debug>:${CONAN_C_FLAGS_ZLIB_DEBUG_LIST}  ${CONAN_CXX_FLAGS_ZLIB_DEBUG_LIST}>)
  
-    set(CONAN_TARGETS CONAN_PKG::boost CONAN_PKG::bzip2 CONAN_PKG::zlib)
+    set(CONAN_TARGETS CONAN_PKG::boost CONAN_PKG::Poco CONAN_PKG::bzip2 CONAN_PKG::OpenSSL CONAN_PKG::zlib)
 
 endmacro()
 

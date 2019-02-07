@@ -1,9 +1,0 @@
-[requires]
-boost/1.69.0@conan/stable
-
-
-[options]
-pistache:shared=True
-
-[generators]
-cmake
