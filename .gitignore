@@ -3,7 +3,6 @@ src/bin/
 
 src/CMakeFiles/
 
-src/conanbuildinfo\.cmake
 
 src/CMakeCache\.txt
 
